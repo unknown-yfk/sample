@@ -23,7 +23,6 @@ export default function HomePage() {
           <h1 className="text-xl font-bold">PORTFOLIO</h1>
         </div>
         <div className="w-40 relative flex items-center">
-          {/* Magnifying Glass Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-gray-400 absolute left-3"
@@ -38,7 +37,6 @@ export default function HomePage() {
               d="M11 19a8 8 0 100-16 8 8 0 000 16zm6-2l4 4"
             />
           </svg>
-          {/* Input Field */}
           <Input
             type="search"
             placeholder="Пошук"
@@ -57,22 +55,41 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="p-6 flex gap-6">
+        
+
         {/* Left Panel */}
         <section className="flex-1">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">NCOIN/USD</h2>
-            <p className="text-xl mt-2">
-              $14,730.00 <span className="text-red-500">-1.02%</span>
-            </p>
-            {/* Replace with a chart component */}
-            <Views />
-            <div className=" bg-gray-800 mt-4 rounded-lg"></div>
-          </div>
+  <div className="mb-6">
+    <h2 className="text-3xl font-bold">NCOIN/USD</h2>
+    <p className="text-xl mt-2">
+      $14,730.00 <span className="text-red-500">-1.02%</span>
+    </p>
+    <Views />
+    <div className="bg-gray-800 mt-4 rounded-lg"></div>
+  </div>
 
-          <TableDemo />
+  <div className="flex justify-between mb-6">
+  <div>
+    <h1 className="text-2xl font-bold text-white">Транзакції</h1>
+  </div>
+  <div>
+  
+    <Select>
+                  <SelectTrigger className="w-28 bg-transparent text-white border-none">
+                    <SelectValue placeholder="Цього тижня" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="ncoin">Цього тижня</SelectItem>
+                    <SelectItem value="btc">Цього тижня</SelectItem>
+                  </SelectContent>
+                </Select>
+  </div>
+</div>
 
 
-        </section>
+  <TableDemo />
+</section>
+
 
         {/* Right Panel */}
         <aside className="w-96">
@@ -85,7 +102,6 @@ export default function HomePage() {
             <p className="text-sm text-gray-400 mt-4">1 NCOIN = $0.5112</p>
 
             <div className="space-y-4 mt-6">
-              {/* First Row: "Віддати" */}
               <div className="flex justify-between items-center bg-gray-700 rounded-lg p-3">
                 <span className="text-sm text-gray-400">Віддати</span>
                 <Select>
@@ -99,7 +115,6 @@ export default function HomePage() {
                 </Select>
               </div>
 
-              {/* Second Row: "Отримати" */}
               <div className="flex justify-between items-center bg-gray-700 rounded-lg p-3">
                 <span className="text-sm text-gray-400">Отримати</span>
                 <Select>
@@ -114,7 +129,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Action Button */}
             <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full mt-6">
               Придбати Tether US
             </Button>

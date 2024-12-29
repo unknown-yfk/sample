@@ -92,11 +92,10 @@ export function Views() {
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="border-0">
-          {/* Removed border */}
           <LineChart
             accessibilityLayer
             data={chartData}
-            height={80} // Reduced chart height to 150
+            height={80} 
             margin={{
               left: 12,
               right: 12,
@@ -108,8 +107,8 @@ export function Views() {
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)} // Display first 3 letters of month
-              stroke="#bbb" // Adjust axis line color for contrast
+              tickFormatter={(value) => value.slice(0, 3)} 
+              stroke="#bbb" 
             />
             <YAxis
               tickLine={false}
@@ -122,7 +121,7 @@ export function Views() {
             <Line
               dataKey="desktop"
               type="linear"
-              stroke={getLineColor(chartData[chartData.length - 1].desktop)} // Dynamic color based on the value
+              stroke={getLineColor(chartData[chartData.length - 1].desktop)} 
               strokeWidth={2}
               dot={false}
             />
